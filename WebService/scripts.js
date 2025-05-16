@@ -20,12 +20,6 @@ let register = (username, password1, password2) => {
   
   db.setItem("users", users)
   db.setItem("global", global)
-  alert("Done!")
+  db.setItem("current_user", JSON.stringify(user))
 }
 
-
-let startNowLink = document.querySelector("#startNowLink")
-let startNowBtn = document.querySelector("#startNowBtn")
-
-
-startNowBtn.addEventListener("click")

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Index.Html</title>
   <style>
     * { margin: 0; padding: 0; }
     header, main, footer { padding: 2em; }
@@ -21,6 +21,25 @@
       padding: .25em;
       border-radius: .5em;
     }
+    .system-btns {
+      background: black;
+      padding: 1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: .25em;
+      box-shadow: 0 0 .5em black;
+      border-radius: .5em;
+      margin: 1em 0;
+    }
+    .system-btns button {
+      background: black;
+      color: white;
+      border: 2px solid white;
+      padding: 1em;
+      border-radius: .25em;
+      box-shadow: 0 0 .5em white;
+    }
   </style>
 </head>
 <body>
@@ -31,6 +50,59 @@
     <div class="links">
       <li><a href="WebService/index.html">WebService</a></li>
     </div>
+    
+    <div class="system-btns">
+     
+      <button onclick="addUser()">AddUser</button>
+      <button onclick="clearDb()">Clear db</button>
+      <button onclick="allDataShow()">All data show</button>
+    
+    </div>
+    
   </main>
+<script>
+  
+  let db = localStorage;
+  let addUserBtn = document.querySelector("#addUser")
+  
+  let addUser = () => {
+    let users = JSON.parse(db.getItem("users")) || []
+    let username = prompt("Username")
+    
+    if (username in users) {
+      alert("Error")
+    } else {
+      users.push(username)
+      users = JSON.stringify(users)
+      db.setItem("users", users)
+      alert("Done")
+    }
+  }
+  
+  let clearDb = () => {
+    db.clear()
+    alert("Done")
+  }
+  
+  let allDataShow = () => {
+    let box = document.querySelector("main")
+    let users = JSON.parse(db.getItem("users")) || []
+    alert("Done")
+    if (users) {
+      let textBox = []
+      for (let user of users) {
+        textBox += `<button>${user}</button>`
+      }
+      box.innerHTML += `
+<div class="system-btns">
+  ${textBox}
+</div>
+      `
+    } else {
+      alert("Empty")
+    }
+  }
+  
+</script>
 </body>
 </html>

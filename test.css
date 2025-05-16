@@ -1,0 +1,29 @@
+* { padding: 0; margin: 0; color: white; }
+header, main, footer { padding: 2em; }
+body {
+  background: url("bg.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+header {
+  color: white;
+  border-radius: 0 0 .4em;
+  backdrop-filter: blur(1em);
+  border-bottom: 2px solid #F1F1F2;
+}
+
+.box {
+  backdrop-filter: blur(1em);
+  padding: 1em;
+  border: 2px solid #F1F1F2;
+  border-radius: .25em;
+}
+
+button {
+  padding: 1em 2em;
+  border: 2px solid #F1F1F2;
+  border-radius: 5em;
+  background: none;
+  box-shadow: 0 0 .5em #F1F1F2;
+}

@@ -10,19 +10,15 @@
   <header>
     <h1>ShaxCoder</h1>
   </header>
-  <main class="main-form">
+  <main>
     
-    <a href="home.html" id="startNowLink"><button id="startNowBtn">Start Now</button></a>
+    <a><button class="box-btn">
+      <h2>Create Course</h2>
+      <h3>Click, and create</h3>
+    </button></a>
     
   </main>
 <script>
-
-let aLink = document.querySelector("#startNowLink")
-let user = JSON.parse(localStorage.getItem("current_user")) || null
-if (!user) {
-  aLink.href = "form.html"
-}
-
 </script>
 </body>
 </html>
