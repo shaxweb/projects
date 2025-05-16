@@ -1,5 +1,0 @@
-
-
-let someButton = () => {
-  alert("Some")
-}
