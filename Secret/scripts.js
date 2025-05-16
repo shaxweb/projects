@@ -4,10 +4,9 @@ const mainBox = document.querySelector("main")
 keyInput.addEventListener("input", () => {
   let text = keyInput.value
   if (text == "shaxrux" || text == "Shaxrux") {
-    alert("He is my owner!")
-    keyInput.value = "yeaahh!";
+    alert("He is my owner!");
     
-    mainBox.innerHTML = `
+    mainBox.innerHTML += `
     <div class="box">
       <h2>Enter the secret key</h2><br>
       <input id="keyInput" placeholder="Secret Key">
@@ -18,6 +17,5 @@ keyInput.addEventListener("input", () => {
       <p>@pirimbetov12</p>
     </div>
     `;
-    
   }
 })
