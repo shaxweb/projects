@@ -7,6 +7,10 @@
   color: white;
 }
 
+:root {
+  --border-color: #F1F1F2;
+}
+
 header, main, footer { padding: 2em; }
 body {
   background: url("img/bg.png") no-repeat center center;
@@ -18,20 +22,20 @@ header {
   color: white;
   border-radius: 0 0 .4em;
   backdrop-filter: blur(1em);
-  border-bottom: 2px solid #F1F1F2;
+  border-bottom: 2px solid var(--border-color);
 }
 
 .box {
   backdrop-filter: blur(1em);
   padding: 1em;
-  border: 2px solid #F1F1F2;
+  border: 2px solid var(--border-color);
   border-radius: .25em;
 }
 
 button {
   padding: 1em 2em;
-  border: 2px solid #F1F1F2;
+  border: 2px solid var(--border-color);
   border-radius: 5em;
   background: none;
-  box-shadow: 0 0 .5em #F1F1F2;
+  box-shadow: 0 0 .5em var(--border-color);
 }
