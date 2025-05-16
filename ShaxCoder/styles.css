@@ -9,7 +9,7 @@
 
 header, main, footer { padding: 2em; }
 body {
-  background: url("bg.jpg") no-repeat center center;
+  background: url("img/bg.png") no-repeat center center;
   background-size: cover;
   height: 100vh;
 }
