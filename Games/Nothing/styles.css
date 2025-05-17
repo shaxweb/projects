@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: black;
+  color: white;
+  padding: 1em;
+}
+
+main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.map {
+  background: grey;
+  position: relative;
+  height: 60%;
+  width: 80%;
+  border: 2px solid black;
+  border-radius: .10em;
+}
+
+.player {
+  padding: .5em;
+  background: green;
+  position: absolute;
+  border-radius: .5em;
+  transition: all .5s ease;
+}
+
+.controller {
+  background: grey;
+  padding: 1em;
+  border: 2px solid black;
+  border-radius: .10em;
+  margin: 1em 0;
+}
+
+button {
+  padding: 1em 2em;
+  border: none;
+}
