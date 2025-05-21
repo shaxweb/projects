@@ -39,10 +39,22 @@ header {
   padding: .5em;
   border-radius: .5em;
   backdrop-filter: blur(1em);
+  position: relative;
+  transition: all .5s ease;
 }
 
 .box h2 { margin-block: 0 .5em; }
 .box button { margin: .5em 0}
+.box .date {
+  position: absolute;
+  right: .5em;
+  bottom: .5em;
+}
+.box:hover {
+  box-shadow: 0 0 1em var(--bg-color);
+  transform: scale(1.025);
+}
+
 button {
   background: var(--bg-color);
   padding: .5em 2em;
