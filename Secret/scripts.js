@@ -18,7 +18,14 @@ keyInput.addEventListener("input", () => {
     secret = prompt("Secret: ")
     secret[key] = secret
     alert("Added")
-  } 
+  } else if (text == "my vibe") {
+    const audio = document.getElementById("tangled_kingdom")
+    
+    audio.play()
+    setTimeout(() => {audio.pause()}, 5000)
+    keyInput.value = "Tangled Kingdom"
+    keyInput.disabled = true;
+  }
   
   if (text == "Al Fatiha" || text == "al fatiha" || text == "Al fatiha") {
     const audio = document.getElementById("al_fatiha")
