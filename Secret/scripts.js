@@ -6,6 +6,8 @@ let secrets = {"shaxrux": "Hello, World", "URL": "https://t.me/pirimbetov12"}
 
 keyInput.addEventListener("input", () => {
   let text = keyInput.value
+  text = text.toLowerCase()
+  
   if (secrets[text]) {
     justBox.textContent = secrets[text]
   } else if (text == "shaxaddsecret") {
