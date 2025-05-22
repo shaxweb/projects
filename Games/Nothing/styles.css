@@ -1,48 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background: black;
+  font-family: "Noto Sans", serif;
   color: white;
-  padding: 1em;
+  padding: 0;
+  margin: 0;
 }
 
-main {
-  height: 80vh;
+body {
+  background: black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  height: 80vh;
   align-items: center;
 }
-
-.map {
-  background: grey;
-  position: relative;
-  height: 60%;
-  width: 80%;
-  border: 2px solid black;
-  border-radius: .10em;
+  
+a { color: grey; text-decoration: none; }
+a button { font-size: 1.1em; background: none; color: grey; border: none; }
+a button:active { background: grey; color: black; border-radius: .25em; padding: 0 .5em; }
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
-
-.player {
+.keyboard .keyboard-line {
   padding: .5em;
-  background: green;
-  position: absolute;
-  border-radius: .5em;
-  transition: all .5s ease;
+  display: flex;
 }
-
-.controller {
-  background: grey;
-  padding: 1em;
-  border: 2px solid black;
-  border-radius: .10em;
-  margin: 1em 0;
-}
-
-button {
-  padding: 1em 2em;
+.keyboard button {
+  background: black;
   border: none;
+  padding: .5em;
+  margin: auto;
+  font-size: 1.05em;
 }
+
+.typing { margin: 2em 0; }

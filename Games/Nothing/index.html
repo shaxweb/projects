@@ -3,27 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Nothing</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Nothing Game</h1>
-  </header>
-  <main>
-    
-    <div class="map">
-      <div class="player"></div>
+  <a href=""><button>Подсказка</button></a>
+  <br><br>
+  <h1 class="question">Who is this?</h1>
+  
+  <h3 class="typing"><br></h3>
+  
+  <div class="keyboard">
+    <div class="keyboard-line">
+      <button onclick="typeKeyboard('1')">1</button>
+      <button onclick="typeKeyboard('2')">2</button>
+      <button onclick="typeKeyboard('3')">3</button>
+      <button onclick="typeKeyboard('4')">4</button>
+      <button onclick="typeKeyboard('5')">5</button>
+      <button onclick="typeKeyboard('6')">6</button>
+      <button onclick="typeKeyboard('7')">7</button>
+      <button onclick="typeKeyboard('8')">8</button>
+      <button onclick="typeKeyboard('9')">9</button>
+      <button onclick="typeKeyboard('0')">0</button>
     </div>
-    <div class="controller">
-      <button id="top">↑</button>
-      <button id="bottom">↓</button>
-      <button id="right">←</button>
-      <button id="left">→</button><br>
-      <button style="margin: 1em" id="back">Back</button>
+    <div class="keyboard-line">
+      <button onclick="typeKeyboard('Q')">Q</button>
+      <button onclick="typeKeyboard('W')">w</button>
+      <button onclick="typeKeyboard('E')">E</button>
+      <button onclick="typeKeyboard('R')">R</button>
+      <button onclick="typeKeyboard('T')">T</button>
+      <button onclick="typeKeyboard('Y')">Y</button>
+      <button onclick="typeKeyboard('U')">U</button>
+      <button onclick="typeKeyboard('I')">I</button>
+      <button onclick="typeKeyboard('O')">O</button>
+      <button onclick="typeKeyboard('P')">P</button>
     </div>
-    
-  </main>
+    <div class="keyboard-line">
+      <button onclick="typeKeyboard('A')">A</button>
+      <button onclick="typeKeyboard('S')">S</button>
+      <button onclick="typeKeyboard('D')">D</button>
+      <button onclick="typeKeyboard('F')">F</button>
+      <button onclick="typeKeyboard('G')">G</button>
+      <button onclick="typeKeyboard('H')">H</button>
+      <button onclick="typeKeyboard('J')">J</button>
+      <button onclick="typeKeyboard('K')">K</button>
+      <button onclick="typeKeyboard('L')">L</button>
+    </div>
+    <div class="keyboard-line">
+      <button onclick="typeKeyboard('space')">_</button>
+      <button onclick="typeKeyboard('Z')">Z</button>
+      <button onclick="typeKeyboard('X')">X</button>
+      <button onclick="typeKeyboard('C')">C</button>
+      <button onclick="typeKeyboard('V')">V</button>
+      <button onclick="typeKeyboard('B')">B</button>
+      <button onclick="typeKeyboard('N')">N</button>
+      <button onclick="typeKeyboard('M')">M</button>
+      <button onclick="typeKeyboard('rem')"><</button>
+    </div>
+  </div>
+
 <script src="scripts.js"></script>
 </body>
 </html>
