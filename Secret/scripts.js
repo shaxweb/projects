@@ -17,4 +17,23 @@ keyInput.addEventListener("input", () => {
     secret[key] = secret
     alert("Added")
   }
+  
+  if (text == "Al Fatiha" || text == "al fatiha" || text == "Al fatiha") {
+    const audio = document.getElementById("al_fatiha")
+    let body = document.querySelector("body")
+    let header = document.querySelector("header")
+    
+    keyInput.value = "MaShaAllah, Bro!"
+    keyInput.disabled = true;
+    audio.play()
+    
+    body.style.background = "white"
+    body.style.color = "white"
+    header.style.background = "#00FF66"
+    justBox.style.background = "white"
+    justBox.style.color = "black"
+    justBox.style.border = "2px solid #00FF66"
+    keyInput.style.borderLeft = "2px solid #00FF66"
+    keyInput.style.color = "black"
+  }
 })
