@@ -2,7 +2,7 @@ const keyInput = document.getElementById("keyInput")
 const mainBox = document.querySelector("main")
 const justBox = document.querySelector(".box")
 
-let secrets = {"shaxrux": "Hello, World", "URL": "https://t.me/pirimbetov12"}
+let secrets = {"shaxrux": "He is the BEST Developer", "URL": "https://t.me/pirimbetov12"}
 
 keyInput.addEventListener("input", () => {
   let text = keyInput.value
@@ -18,7 +18,7 @@ keyInput.addEventListener("input", () => {
     secret = prompt("Secret: ")
     secret[key] = secret
     alert("Added")
-  }
+  } 
   
   if (text == "Al Fatiha" || text == "al fatiha" || text == "Al fatiha") {
     const audio = document.getElementById("al_fatiha")
