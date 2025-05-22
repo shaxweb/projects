@@ -27,7 +27,7 @@ keyInput.addEventListener("input", () => {
     keyInput.disabled = true;
   }
   
-  if (text == "Al Fatiha" || text == "al fatiha" || text == "Al fatiha") {
+  if (text == "Al Fatiha" || text == "al fatiha" || text == "al fatiha ") {
     const audio = document.getElementById("al_fatiha")
     let body = document.querySelector("body")
     let header = document.querySelector("header")
