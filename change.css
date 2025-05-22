@@ -26,12 +26,21 @@ header {
   margin: .25em;
   padding: 1em;
   backdrop-filter: blur(1em);
+  align-items: center;
 }
 
 .containerX {
   display: flex;
   flex-direction: column;
   gap: .5em 0;
+}
+
+span.small {
+  font-size: .5em;
+  border: 2px solid var(--border-color);
+  background: var(--bg-color);
+  padding: .25em .5em;
+  border-radius: 1em;
 }
 
 .box {
