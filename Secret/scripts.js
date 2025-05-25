@@ -45,4 +45,8 @@ keyInput.addEventListener("input", () => {
     keyInput.style.borderLeft = "2px solid #00FF66"
     keyInput.style.color = "black"
   }
+  
+  if (text == "shaxdrift" || text == "shax drift") {
+    justBox.innerHTML = "<img src='images/shax_drift.png'>"
+  }
 })
