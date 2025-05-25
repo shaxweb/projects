@@ -49,4 +49,8 @@ keyInput.addEventListener("input", () => {
   if (text == "shaxdrift" || text == "shax drift") {
     justBox.innerHTML = "<img src='images/shax_drift.png'>"
   }
+  
+  if (text == "joram" || text == "joram ") {
+    justBox.innerHTML = `<a href="SecretPages/joram/index.html"><button>Usi knopkani bas</button></a>`
+  }
 })
