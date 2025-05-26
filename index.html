@@ -3,115 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Index.Html</title>
-  <style>
-    * { margin: 0; padding: 0; }
-    header, main, footer { padding: 2em; }
-    header {
-      background: black;
-      color: white;
-    }
-    .links {
-      display: flex;
-      flex-direction: column;
-    }
-    .links a {
-      background: black;
-      color: white;
-      padding: .25em;
-      border-radius: .5em;
-    }
-    .links li {
-      margin: .5em 0;
-      padding: 0;
-    }
-    .system-btns {
-      background: black;
-      padding: 1em;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: .25em;
-      box-shadow: 0 0 .5em black;
-      border-radius: .5em;
-      margin: 1em 0;
-    }
-    .system-btns button {
-      background: black;
-      color: white;
-      border: 2px solid white;
-      padding: 1em;
-      border-radius: .25em;
-      box-shadow: 0 0 .5em white;
-    }
-  </style>
+  <title>Change</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>ShaxCoder</h1>
+    <h1>ShaxProjects <span class="small">BETA</span></h1>
   </header>
   <main>
-    <div class="links">
-      <li><a href="WebService/index.html">WebService</a></li><span>Unknown</span>
-      <li><a href="ShaxCoder/index.html">ShaxCoder</a></li><span>Unknown</span>
-      <li><a href="Secret/index.html">Secret</a></li><span>Unknown</span>
-      <li><a href="Games/SimGame/index.html">Games(Nothing)</a></li><span>17.05.2025 - 16:57</span>
-      <li><a href="Services/index.html">Services</a></li><span>19.05.2025 - 8:44</span>
-      <li><a href="change.html">New Home Page</a></li><span>21.05.2025 - 1:40(1:39)</span>
-    </div>
     
-    <div class="system-btns">
-     
-      <button onclick="addUser()">AddUser</button>
-      <button onclick="clearDb()">Clear db</button>
-      <button onclick="allDataShow()">All data show</button>
-    
+    <div class="containerX">
+      <div class="box">
+        <h2>Game Project</h2>
+        <p>My first test game "Sim Game" in this web</p>
+        <button onclick="location.href='Games/SimGame/index.html'">View Project</button>
+        <p class="date">17.05.2025 - 16:57</p>
+      </div>
+      <div class="box">
+        <h2>ToDo App</h2>
+        <p>A project that will help you keep track of your to-do list</p>
+        <button onclick="location.href='ToDo/index.html'">Open Project</button>
+        <p class="date">26.05.2025 - 21:33(21:31)</p>
+      </div>
+      <div class="box">
+        <h2>Secret Project</h2>
+        <p>A site where secrets are kept.Site where secrets are kept. Access only with keys </p>
+        <button onclick="location.href='Secret/index.html'">View Project</button>
+        <p class="date">Unknown</p>
+      </div>
+      <div class="box">
+        <h2>Project about my Services</h2>
+        <p>Here you can find out the prices of the work. Here you can find out the prices of the work. And of course I can develop it for you at an affordable price.</p>
+        <button onclick="location.href='Services/index.html'">View Project</button>
+        <p class="date">19.05.2025 - 8:44</p>
+      </div>
+      <div class="box">
+        <h2>Just a Project</h2>
+        <p>A project that was created for the sake of interest and testing</p>
+        <button onclick="location.href='ShaxCoder/index.html'">View Project</button>
+        <p class="date">Unknown</p>
+      </div>
+      <div class="box">
+        <h2>Just a Project №2</h2>
+        <p>Same as on the project "Just a project"</p>
+        <button onclick="location.href='WebService/index.html'">View Project</button>
+        <p class="date">Unknown</p>
+      </div>
+      <div class="box">
+        <h2>Second Game "Nothing"</h2>
+        <p>The game was cloned from the original game "Nothing"</p>
+        <button onclick="location.href='Games/Nothing/index.html'">View Project</button>
+        <p class="date">22.05.2025 - 16:52(16:53)</p>
+      </div>
+      <div class="box">
+        <h2>Background Image</h2>
+        <p>This</p>
+        <button onclick="location.href='image.html'">Open Image</button>
+      </div>
     </div>
     
   </main>
-<script>
-  
-  let db = localStorage;
-  let addUserBtn = document.querySelector("#addUser")
-  
-  let addUser = () => {
-    let users = JSON.parse(db.getItem("users")) || []
-    let username = prompt("Username")
-    
-    if (username in users) {
-      alert("Error")
-    } else {
-      users.push(username)
-      users = JSON.stringify(users)
-      db.setItem("users", users)
-      alert("Done")
-    }
-  }
-  
-  let clearDb = () => {
-    db.clear()
-    alert("Done")
-  }
-  
-  let allDataShow = () => {
-    let box = document.querySelector("main")
-    let users = JSON.parse(db.getItem("users")) || []
-    alert("Done")
-    if (users) {
-      let textBox = []
-      for (let user of users) {
-        textBox += `<button>${user}</button>`
-      }
-      box.innerHTML += `
-<div class="system-btns">
-  ${textBox}
-</div>
-      `
-    } else {
-      alert("Empty")
-    }
-  }
-  
-</script>
+  <footer><br>
+    <h2>ShaxCoder - BackEnd Developer 2023+</h2><br>
+    <p>Developer with 2 years experience </p>
+  </footer>
 </body>
 </html>
