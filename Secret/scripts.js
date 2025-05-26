@@ -3,6 +3,7 @@ const mainBox = document.querySelector("main")
 const justBox = document.querySelector(".box")
 
 let secrets = {"shaxrux": "He is the BEST Developer", "URL": "https://t.me/pirimbetov12"}
+let playing = false;
 
 keyInput.addEventListener("input", () => {
   let text = keyInput.value
@@ -25,6 +26,7 @@ keyInput.addEventListener("input", () => {
     setTimeout(() => {audio.pause()}, 5000)
     keyInput.value = "Tangled Kingdom"
     keyInput.disabled = true;
+    justBox.innerHTML += "<button onclick='musicPlayer()'>🔘</button>"
   }
   
   if (text == "Al Fatiha" || text == "al fatiha" || text == "al fatiha ") {
@@ -54,3 +56,15 @@ keyInput.addEventListener("input", () => {
     justBox.innerHTML = `<a href="SecretPages/joram/index.html"><button>Usi knopkani bas</button></a>`
   }
 })
+
+let musicPlayer = () => {
+  const audio = document.getElementById("tangled_kingdom")
+  
+  if (!playing) {
+    audio.play()
+    playing = true
+  } else {
+    audio.pause()
+    playing = false
+  }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Background Image</title>
+  <style>
+    body {
+      background: #B3B7DD;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+     justify-content: center;
+    }
+    .box {
+      background: #9CA1D5;
+      border: 2px solid #9097E9;
+      border-radius: 1em;
+      padding: .5em;
+      display: flex;
+      flex-direction: column;
+      gap: 1em 0;
+    }
+    .box img {
+      width: 250px;
+      border-radius: .5em;
+    }
+    .box a {
+      background: #9097E9;
+      border: 2px solid #757DD3;
+      border-radius: .5em;
+      padding: .25em;
+      transition: all .5s ease;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+    }
+    .box a:active {
+      transform: scale(.95);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="change.png">
+    <a href="change.png" download="change.png">Download</a>
+  </div>
+</body>
+</html>
