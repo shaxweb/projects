@@ -53,7 +53,7 @@ keyInput.addEventListener("input", () => {
   }
   
   if (text == "joram" || text == "joram ") {
-    justBox.innerHTML = `<a href="SecretPages/joram/index.html"><button onclick='onMusic()'>Usi knopkani bas</button></a>`
+    justBox.innerHTML = `<a href="SecretPages/joram/index.html"><button>Usi knopkani bas</button></a>`
   }
   
   if (text == "test.html") {
@@ -73,7 +73,7 @@ let musicPlayer = () => {
   }
 }
 
-let onMusic = () => {
-  const audio = document.getElementById("dosim-audio");
-  audio.play()
-}
+//let onMusic = () => {
+//  const audio = document.getElementById("dosim-audio");
+//  audio.play()
+//}
