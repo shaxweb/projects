@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "ARCHIVO", serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background: #EDEDED;
+  padding: 1em;
+}
+
+main {
+  padding: 1em;
+}
+
+.container {
+  border: 2px solid #BEBEBE;
+  border-radius: .5em;
+  margin: .25em 0;
+}
+
+.container .todoControl {
+  background: #EDEDED;
+  padding: 1em;
+  border-radius: .5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todoControl button {
+  background: none;
+  border: 2px solid #BEBEBE;
+  border-radius: .25em;
+  padding: .25em;
+}
+
+.container .todoList {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .todoList .todo {
+  padding: .25em;
+  margin: .15em 0;
+}
+
+.todo button {
+  background: none;
+  border: 2px solid #BEBEBE;
+  font-size: 1.25em;
+  border-radius: .25em;
+  padding: .15em 1em;
+}
