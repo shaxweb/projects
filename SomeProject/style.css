@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "ARCHIVO", serif; /* Noto Sans */
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color1: #443336;
+  --color1-1: #332225;
+  --color2: #BEBEBE;
+  --color3: #EDEDED;
+}
+header, main, footer { padding: 1em; }
+
+header {
+  background: linear-gradient(to right bottom, #443336, #221114);
+  padding: 1em;
+  color: white;
+  text-align: center;
+}
+
+.box {
+  background: var(--color1);
+  padding: 1em;
+  border-radius: .25em;
+}
+
+.box button {
+  font-size: 1.25em;
+  background: var(--color3);
+  color: var(--color1-1);
+  padding: .25em .5em;
+  border-radius: .10em;
+  border: none;
+}
