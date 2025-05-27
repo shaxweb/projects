@@ -55,3 +55,8 @@ main {
   border-radius: .25em;
   padding: .15em 1em;
 }
+
+.todo h3 {
+  border-block: 1px solid #BEBEBE;
+  margin-bottom: .25em;
+}

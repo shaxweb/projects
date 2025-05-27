@@ -31,7 +31,7 @@ let addToDo = () => {
   let globalData = JSON.parse(db.getItem("globalData")) || {id: 1}
   let todos = JSON.parse(db.getItem("todos")) || []
   
-  if (!name || !about) {return alert("None Error!")}
+  if (!name) {return alert("None Error!")}
   let todo = {
     id: globalData.id,
     name: name,
@@ -68,6 +68,8 @@ let updateTodo = (todoId) => {
   let newTodos = []
   let name = prompt("Todo Name: ")
   let about = prompt("About ToDo: ")
+  
+  if (!name) { return alert("None Error!") }
   
   let todo = {
     id: todoId,
