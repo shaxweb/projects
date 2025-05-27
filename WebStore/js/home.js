@@ -6,6 +6,6 @@ if (currentUser == "null") {
   firstLink.href = "register.html"
   firstLink.textContent = "Sign Up"
 } else {
-  firstLink.href = "https://google.com"
-  firstLink.textContent = "Google"
+  firstLink.href = "main/index.html"
+  firstLink.textContent = "ToMain"
 }
