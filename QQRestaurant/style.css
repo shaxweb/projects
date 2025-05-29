@@ -63,3 +63,40 @@ footer {
   border-radius: .5em;
   border: 2px solid var(--color1-1);
 }
+
+.main-form {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-form form {
+  background: var(--color1);
+  padding: 1em;
+  border: 2px solid var(--color1-1);
+  border-radius: .5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-form form input {
+  background: var(--color2);
+  padding: .5em;
+  background: no-repeat;
+  border: none;
+  outline: none;
+  border-left: 2px solid var(--color3);
+  margin: .5em 0;
+}
+
+.main-form form button {
+  background: var(--color1-1);
+  padding: .5em;
+  border: 2px solid var(--color3);
+  border-radius: .15em;
+}
+
+.main-form form input,
+.main-form form button { font-size: 1.25em; }

@@ -16,7 +16,7 @@
     <div class="box">
       <h2 style="margin-bottom: .25em;">Biz benen oz biznesiñizdi baslan</h2>
       <h3 style="margin-bottom: .5em;">Haziraq jazilin, ham biz benen birge osin</h3>
-      <button>Baslaw</button>
+      <button id="toStartButton">Baslaw</button>
     </div>
     
     <div class="box center-box">
@@ -38,12 +38,12 @@
     <div class="contacts">
       <div class="contact">
         <h4>Telephon: +998906524055</h4>
-        <button>Zvonok etiw</button>
+        <a href="tel:+998906524055"><button>Zvonok etiw</button></a>
       </div>
       
       <div class="contact">
         <h4>Email: shaxrux243@gmail.com</h4>
-        <button>Pochtaĝa jaziw</button>
+        <a href="mailto:shaxrux243@gmail.com"><button>Pochtaĝa jaziw</button></a>
       </div>
 
       <div class="contact">
@@ -53,5 +53,15 @@
     </div>
   
   </footer>
+<script>
+  const toStartButton = document.getElementById("toStartButton")
+  const currentUser = JSON.parse(localStorage.getItem("currentUser")) || null
+  
+  if (currentUser == null) {
+    toStartButton.addEventListener("click", () => { window.location.href = "register.html" })
+  } else {
+    toStartButton.addEventListener("click", () => { window.location.href = "https://google.com" })
+  }
+</script>
 </body>
 </html>
