@@ -10,7 +10,8 @@ const updatePage = () => {
   for (let i of notes) {
     textContent += `
       <button class="note" onclick="viewNote(${i.id})">
-        <h2>${i.name}</h2>
+        <h2>${i.name}</h2><br>
+        <p class="date">${i.created_at}</p>
       </button>
     `
   }

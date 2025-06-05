@@ -26,6 +26,7 @@
 const db = localStorage;
 
 const addNote = (name, text) => {
+  const date = new Date;
   let notes = JSON.parse(db.getItem("notes")) || []
   let globalData = JSON.parse(db.getItem("globalData")) || {id: 1}
   let errorBox = document.getElementById("errorBox")
@@ -36,7 +37,8 @@ const addNote = (name, text) => {
   let note = {
     id: globalData.id,
     name: name,
-    text: text
+    text: text,
+    created_at: `${date.getFullYear()}.${date.getMonth()+1}.${date.getDate()}-${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
   }
   notes.push(note)
   notes = JSON.stringify(notes)
