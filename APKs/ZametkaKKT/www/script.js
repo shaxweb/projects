@@ -13,8 +13,9 @@ const updatePage = () => {
         <h2>${i.name}</h2>
       </button>
     `
-    notesListBox.innerHTML = textContent
   }
+  if (textContent == "") { return notesListBox.innerHTML = `<div id='emptyNotesMsg'><h2>Baza bos</h2><button onclick="location.href='create_note.html'">Zametka jaratiw</button></div>` }
+  notesListBox.innerHTML = textContent
 }
 
 const addNote = (name, text) => {

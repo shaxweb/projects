@@ -109,7 +109,8 @@ main { padding: .5em; }
   border-radius: .5em;
 }
 
-.main-form form button {
+.main-form form button,
+#emptyNotesMsg button {
   background: var(--color3);
   padding: .5em;
   border-radius: .5em;
@@ -123,6 +124,14 @@ main { padding: .5em; }
   padding: .5em;
   border: 2px solid red;
   border-radius: .5em;
+}
+
+#emptyNotesMsg {
+  background: var(--color2);
+  border-radius: 1em;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
 }
 
 #aboutDev {
