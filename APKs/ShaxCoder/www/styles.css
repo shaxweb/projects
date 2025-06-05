@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  -webkit-user-select: none; /* Chrome, Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+  user-select: none;         /* Стандарт */
+  font-family: "Noto Sans", serif;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color1: #F7F7F7;
+  --color2: #FFFFFF;
+  --color3: #0066FF;
+  --color4: #4181FF;
+  --color5: #00FF66;
+  --shadow: #E0E0E0;
+}
+
+body { background: var(--color1); }
+header {
+  background: var(--color2);
+  padding: 1em;
+}
+
+main {
+  padding: 1em;
+}
+
+.container,
+.container-btn {
+  background: var(--color2);
+  padding: 1em;
+  border: none;
+  border-radius: 1em;
+  box-shadow: 0 0 .5em var(--shadow);
+}
+
+input {
+  background: var(--color2);
+  border: 2px solid var(--color3);
+  padding: .5em;
+  border-radius: .5em;
+}
+
+button {
+  background: var(--color5);
+  color: var(--color4);
+  padding: .5em;
+  border-radius: .5em;
+  border: none;
+}
+
+.urls-list {
+  display: flex;
+  flex-direction: column;
+  gap: .25em;
+  margin: 1em 0;
+}
+
+.urls-list button {
+  background: var(--color2);
+  padding: 1em;
+  border: none;
+  border-radius: 1em;
+  box-shadow: 0 0 .5em var(--shadow);
+  word-wrap: break-word; /* для старых браузеров */
+  overflow-wrap: break-word; /* современный стандарт */
+}

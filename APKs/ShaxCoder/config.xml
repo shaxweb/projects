@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.shaxcoder.shaxcoder"
+        version="Alpha 1"
+        xmlns="http://www.w3.org/ns/widgets"
+        xmlns:cdv="http://cordova.apache.org/ns/1.0">
+
+  <name>ShaxCoder</name>
+  <description>ShaxCoder - official App</description>
+  <author email="shaxrux243@gmail.com" href="https://shaxweb.github.io/projects">Shaxrux</author>
+
+  <content src="index.html" />
+  <platform name="android" />
+  <icon src="res/icon.png" />
+  <splash src="res/splash.png" />
+
+</widget>

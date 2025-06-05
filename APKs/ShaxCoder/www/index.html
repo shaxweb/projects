@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShaxCoder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>ShaxCoder</h1>
+  </header>
+  <main>
+    <div class="container">
+      <h2>Input URL</h2>
+      <input id="openUrl" type="url" placeholder="URL...">
+      <button onclick="addNewUrl(openUrl.value)">Open</button>
+    </div>
+    <div class="urls-list"></div>
+  </main>
+<script src="js/database.js"></script>
+</body>
+</html>
