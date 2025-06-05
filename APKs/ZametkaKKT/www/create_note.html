@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Заметка ККТ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h3>Заметка Каракалпак тилинде</h3>
+  </header>
+  <main class="main-form">
+    
+    <form>
+      <div id="errorBox" style="display: none;"></div>
+      <input id="noteName" placeholder="Заметка ати">
+      <textarea id="noteText" cols="30" rows="8" placeholder="Заметка Тексти"></textarea>
+      <button type="button" onclick="addNote(noteName.value, noteText.value)">Саклау</button>
+    </form>
+    
+  </main>
+
+<p id="aboutDev">ShaxCoder &copy; 2023</p>
+<script>
+const db = localStorage;
+
+const addNote = (name, text) => {
+  let notes = JSON.parse(db.getItem("notes")) || []
+  let globalData = JSON.parse(db.getItem("globalData")) || {id: 1}
+  let errorBox = document.getElementById("errorBox")
+  
+  if (!name.replace(/\s+/g, '')) {errorBox.textContent = "Заметка атин жазин!"; errorBox.style.display = "block"; return}
+  if (!text.trim()) {errorBox.textContent = "Заметка текстин жазин!"; errorBox.style.display = "block"; return}
+  
+  let note = {
+    id: globalData.id,
+    name: name,
+    text: text
+  }
+  notes.push(note)
+  notes = JSON.stringify(notes)
+  globalData = JSON.stringify({id: globalData.id + 1})
+  db.setItem("notes", notes)
+  db.setItem("globalData", globalData)
+  window.location.href = "index.html"
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bizdiñ Koshe</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <h1>Bizdiñ koshe</h1>
+  </header>
+  <main>
+    
+    <div class="user-container">
+      <h2>Ati</h2>
+      <input id="userName">
+      <h2>Parol</h2>
+      <input id="userPassword" type="number">
+      <button style="display: none;">Saqlaw</button>
+    </div>
+
+  </main>
+
+<script>
+  const db = localStorage;
+  const sdb = sessionStorage;
+  const user = JSON.parse(db.getItem("user")) || null
+  const unlocked = JSON.parse(sdb.getItem("unlocked")) || {status: false}
+  
+  if (!unlocked.status) {
+    window.location.href = "../unlock.html"
+  } else if (user == null) {
+    window.location.href = "../index.html"
+  }
+  
+  const userName = document.getElementById("userName")
+  const userPassword = document.getElementById("userPassword")
+  const changeButton = document.querySelector("button")
+  
+  userName.value = user.name
+  userPassword.value = user.password
+  
+  userName.addEventListener("input", () => {changeButton.style.display = "block"})
+  userPassword.addEventListener("input", () => {changeButton.style.display = "block"})
+  
+  changeButton.addEventListener("click", () => {
+    let user = {
+      name: userName.value,
+      password: userPassword.value
+    }
+    localStorage.setItem("user", JSON.stringify(user))
+    window.location.href = "index.html"
+  })
+</script>
+</body>
+</html>

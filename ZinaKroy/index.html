@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ZinaKroy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="img/logo.png"></a>
+    <!-- <button><img src="img/menu.png"></button> -->
+  </header>
+  <main>
+    
+    <button class="menu-btn" onclick="location.href='save_order.html'">
+      <h1>Сохранить заказ</h1><br>
+      <p>Сохраний отчеты и тд на базе</p>
+    </button>
+    
+    <div class="orders-list"></div>
+    
+  </main>
+<script>
+  const db = localStorage;
+  let ordersListBox = document.querySelector(".orders-list")
+  let orders = JSON.parse(db.getItem("orders")) || null
+  
+  if (orders != null) {
+    let globalPrice = 0
+  
+    for (let i of orders) { globalPrice += i.price }
+    
+    let textContent = `<h2>Global: ${globalPrice}</h2>`
+    for (let i of orders) {
+      textContent += `
+      <div class="order-box">
+        <h2>Name: ${i.name}</h2>
+        <h3>Price: ${i.price}</h3>
+      </div>
+  `
+    }
+    
+    ordersListBox.innerHTML = textContent
+  }
+  
+  setInterval(() => {
+    window.addEventListener("offline", () => {
+      alert("Connecting Error")
+    })
+  }, 100)
+  
+</script>
+</body>
+</html>

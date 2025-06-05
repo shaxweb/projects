@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bizdiñ Koshe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="main-form">
+    <form>
+      <h2>Registracia</h2>
+      <input id="userName" type="text" placeholder="Atiñdi jaz">
+      <input id="userPassword" type="number" placeholder="Parol kirit">
+      <button>Ashiw</button>
+    </form>
+  </main>
+<script>
+  const db = localStorage;
+  const sdb = sessionStorage;
+  let user = JSON.parse(db.getItem("user")) || null
+  
+  if (user != null) {
+    window.location.href = "unlock.html"
+  } else {
+    const submitButton = document.querySelector("button")
+    submitButton.addEventListener("click", () => {
+      const userName = document.getElementById("userName")
+      const userPassword = document.getElementById("userPassword")
+      
+      let user = JSON.stringify({name: userName.value, password: userPassword.value})
+      db.setItem("user", user)
+      sdb.setItem("unlocked", JSON.stringify({status: true}))
+      window.location.href = "main/index.html"
+    })
+  }
+  
+</script>
+</body>
+</html>

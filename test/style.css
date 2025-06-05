@@ -1,0 +1,58 @@
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --note-bg: #fff;
+  --note-border: #ddd;
+  --note-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --accent: #4a90e2;
+  --font-main: 'Segoe UI', sans-serif;
+}
+
+/* Запрет на выделение текста и перетаскивание изображений */
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: var(--font-main);
+  color: var(--text-color);
+  padding: 2rem;
+}
+
+.app {
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.note {
+  background: var(--note-bg);
+  border: 1px solid var(--note-border);
+  box-shadow: var(--note-shadow);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.note img {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 8px;
+}

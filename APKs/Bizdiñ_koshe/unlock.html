@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unlock</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="main-form">
+    <form>
+      <h2>Kiriw ushin parol jaz</h2>
+      <input id="password" type="number" placeholder="Parol">
+      <a href="forgetPw.html" style="font-size: .8em; margin: .5em 0;">Umutip qaldim...</a>
+    </form>
+  </main>
+<script>
+  const db = localStorage;
+  const sdb = sessionStorage;
+  const user = JSON.parse(db.getItem("user")) || null
+  const userPw = document.getElementById("password")
+  if (user == null) { window.location.href = "index.html" }
+  
+  userPw.addEventListener("input", () => {
+    if (userPw.value == user.password) {
+      sdb.setItem("unlocked", JSON.stringify({status: true}))
+      window.location.href = "main"
+    }
+  })
+  
+</script>
+</body>
+</html>

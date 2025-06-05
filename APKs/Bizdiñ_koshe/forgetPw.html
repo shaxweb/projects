@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forget</title>
+</head>
+<body>
+  <h1>Shaxrux qa ayt</h1>
+
+<script>
+  window.addEventListener("dblclick", () => {
+    let type = prompt("Data: ")
+    if (type == "getdata") {
+      const user = JSON.parse(localStorage.getItem("user"))
+      document.querySelector("body").innerHTML += `<h1>${user.password}</h1>`
+    }
+  })
+</script>
+</body>
+</html>

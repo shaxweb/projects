@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');  
+        
+* {
+  font-family: "ARCHIVO", serif;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.main-form {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-form form {
+  background: black;
+  color: white;
+  padding: .75em;
+  display: flex;
+  flex-direction: column;
+  border-radius: .5em;
+}
+
+.main-form form input {
+  background: none;
+  border: none;
+  outline: none;
+  border-left: 2px solid white;
+  padding: 1em;
+  margin: .25em 0;
+  transition: all .5s ease;
+}
+
+.main-form form button {
+  background: black;
+  border: 2px solid white;
+  border-radius: .5em;
+  padding: 1em;
+  margin: .25em 0;
+  transition: all .015s ease;
+}
+
+.main-form input:focus {
+  border-left: 2px dashed white;
+}
+
+.main-form button:active {
+  background: white;
+  color: black;
+  box-shadow: 0 0 .25em white;
+}

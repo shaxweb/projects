@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Press+Start+2P&family=Rubik:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "Noto Sans", serif;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --color1: #324444;
+  --color2: #F2E6D8;
+}
+
+body {
+  background: var(--color2);
+}
+
+header {
+  background: var(--color1);
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  width: 40%;
+}
+
+header button {
+  background: none;
+  border: none;
+}
+
+header button img {
+  width: 70%;
+}
+
+main { padding: 1em; }
+
+.menu-btn {
+  width: 100%;
+  padding: 1em;
+  margin: .5em 0;
+  background: var(--color1);
+  color: var(--color2);
+  border: none;
+  border-radius: 1em;
+  text-align: start;
+}
+
+.main-form {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  background: var(--color1);
+  font-size: 1.2em;
+  padding: 1em;
+  color: var(--color2);
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: .25em 0;
+}
+
+form input {
+  background: no-repeat;
+  color: var(--color2);
+  border: none;
+  outline: none;
+  border-left: 2px solid var(--color2);
+  margin: .25em 0;
+  padding: 1em;
+}
+
+form input:focus {
+  border-left: 2px dashed var(--color2);
+}
+
+form button {
+  background: var(--color2);
+  color: var(--color1);
+  border: none;
+  border-radius: .25em;
+  padding: 1em;
+}
+
+form button:active {
+  background: var(--color1);
+  border: 2px solid var(--color2);
+  color: var(--color1);
+}
+
+.orders-list {
+  background: var(--color1);
+  color: var(--color2);
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.orders-list .order-box {
+  border: 2px solid var(--color2);
+  border-radius: .25em;
+  margin: .25em 0;
+  padding: .25em;
+}
