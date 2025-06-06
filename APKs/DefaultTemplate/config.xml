@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.shaxcoder.zametkakkt"
-        version="Alpha 0.17"
+<widget id="com.shaxcoder.appname"
+        version="1.0.0"
         xmlns="http://www.w3.org/ns/widgets"
         xmlns:cdv="http://cordova.apache.org/ns/1.0">
 
-  <name>Zametka KKT</name>
-  <description>Esletpe qaraqalpaq tilinde</description>
+  <name>AppName</name>
+  <description>AppDescription</description>
   <author email="shaxrux243@gmail.com" href="https://shaxweb.github.io/projects">Shaxrux</author>
 
   <content src="index.html" />
@@ -32,6 +32,3 @@
   <plugin name="cordova-plugin-splashscreen" spec="6.0.2" />
 
 </widget>
-
-
-<!--   <preference name="SplashScreen" value="launchscreen" /> -->
