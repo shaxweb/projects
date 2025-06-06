@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.shaxcoder.zametkakkt"
-        version="Alpha 0.15"
+        version="Alpha 0.16"
         xmlns="http://www.w3.org/ns/widgets"
         xmlns:cdv="http://cordova.apache.org/ns/1.0">
 
@@ -10,6 +10,7 @@
 
   <content src="index.html" />
   <icon src="res/icon.png" />
+
   <platform name="android">
     <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi" />
     <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi" />
@@ -18,12 +19,13 @@
     <splash src="res/screen/android/splash-port-xxxhdpi.png" density="port-xxxhdpi" />
   </platform>
 
-  <plugin name="cordova-plugin-splashscreen" />
+  <plugin name="cordova-plugin-splashscreen" spec="6.0.2" />
 
   <preference name="SplashScreen" value="screen" />
-  <preference name="SplashScreenDelay" value="3000" />
+  <preference name="SplashScreenDelay" value="5000" />
   <preference name="AutoHideSplashScreen" value="true" />
+  <preference name="ShowSplashScreenSpinner" value="false" />
+  <preference name="SplashMaintainAspectRatio" value="true" />
   <preference name="FadeSplashScreen" value="true" />
   <preference name="FadeSplashScreenDuration" value="500" />
-
 </widget>
