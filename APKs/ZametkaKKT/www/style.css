@@ -19,12 +19,13 @@
   --txt-color: #000000;
 }
 
-body { background: var(--color1); color: var(--txt-color) }
+body { background: var(--color1); color: var(--txt-color); transition: all .5s ease; }
 
 header {
   background: var(--color2);
   padding: 1em;
   color: var(--txt-color);
+  transition: all .5s ease;
 }
 
 main { padding: .5em; }
@@ -46,6 +47,11 @@ main { padding: .5em; }
   text-align: start;
   box-shadow: 0 0 .5em var(--shadow);
   font-family: "Segoe UI", Verdana, Geneva, Tahoma, sans-serif;
+  transition: all .5s ease;
+}
+
+.note:hover {
+  transform: scale(0.95);
 }
 
 .note .date {
@@ -78,12 +84,14 @@ main { padding: .5em; }
   max-width: 80%;
   backdrop-filter: blur(1em);
   color: var(--txt-color);
+  transition: all .5s ease;
 }
 
 #view-note .buttons {
   position: absolute;
   bottom: 1em; right: 1em;
   color: var(--txt-color);
+  transition: all .5s ease;
 }
 
 #view-note button {
@@ -92,10 +100,12 @@ main { padding: .5em; }
   border: 2px solid var(--color2);
   border-radius: 1em;
   color: var(--txt-color);
+  transition: all .5s ease;
 }
 
 #view-note pre {
   color: var(--txt-color);
+  transition: all .5s ease;
   white-space: pre-wrap;
   word-wrap: break-word; /* для старых браузеров */
   overflow-wrap: break-word; /* современный стандарт */
@@ -116,6 +126,7 @@ main { padding: .5em; }
   border-radius: 1em;
   gap: .25em;
   color: var(--txt-color);
+  transition: all .5s ease;
 }
 
 .main-form form input,
@@ -126,6 +137,7 @@ main { padding: .5em; }
   outline: none;
   border-radius: .5em;
   color: var(--txt-color);
+  transition: all .5s ease;
 }
 
 .main-form form button,
@@ -135,6 +147,7 @@ main { padding: .5em; }
   border-radius: .5em;
   border: none;
   color: var(--txt-color);
+  transition: all .5s ease;
 }
 
 .main-form form #errorBox {
@@ -159,4 +172,5 @@ main { padding: .5em; }
   position: fixed;
   bottom: 0; left: 0;
   color: var(--txt-color);
+  transition: all .5s ease;
 }

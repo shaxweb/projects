@@ -8,20 +8,21 @@
 </head>
 <body>
   <header>
-    <h3>Заметка Каракалпак тилинде</h3>
+    <h3>"Esletpe" qaraqalpaq tilinde</h3>
   </header>
   <main class="main-form">
     
     <form>
       <div id="errorBox" style="display: none;"></div>
-      <input id="noteName" placeholder="Заметка ати">
-      <textarea id="noteText" cols="30" rows="8" placeholder="Заметка Тексти"></textarea>
-      <button type="button" onclick="addNote(noteName.value, noteText.value)">Саклау</button>
+      <input id="noteName" placeholder="Esletpe atı">
+      <textarea id="noteText" cols="30" rows="8" placeholder="Esletpe teksti"></textarea>
+      <button type="button" onclick="addNote(noteName.value, noteText.value)">Saqlaw</button>
     </form>
     
   </main>
 
 <p id="aboutDev">ShaxCoder &copy; 2023</p>
+<script src="change-theme.js"></script>
 <script>
 const db = localStorage;
 
@@ -49,6 +50,5 @@ const addNote = (name, text) => {
 }
 
 </script>
-<script src="change-theme.js"></script>
 </body>
 </html>

@@ -47,8 +47,8 @@ const viewNote = (id) => {
 <h2>${note.name}</h2><hr><br>
 <pre>${note.text}</pre><br><br><br>
 <div class="buttons">
-<button onclick="deleteNote(${note.id})">Удалить ету</button>
-<button onclick="closeNoteViewBox()">Жабу</button>
+<button onclick="deleteNote(${note.id})">Óshiriw</button>
+<button onclick="closeNoteViewBox()">Jabıw</button>
 </div>
   `
 }
@@ -59,7 +59,7 @@ const deleteNote = (id) => {
   
   for (let i of notes) {if (i.id != id) { newNotes.push(i) } }
   
-  let deleteConfirm = confirm("Удалить ету?")
+  let deleteConfirm = confirm("Shınında da óshiriwdi qáleysiz be?")
   if (deleteConfirm) {
     db.setItem("notes", JSON.stringify(newNotes))
     viewNoteBox.style.display = "none"

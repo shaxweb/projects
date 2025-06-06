@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Base64 загрузка и отображение</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #preview {
+      max-width: 300px;
+      margin-top: 20px;
+      border: 1px solid #ccc;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      margin-top: 10px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📤 Загрузите изображение</h2>
+  <input type="file" id="fileInput" accept="image/*" />
+
+  <h3>🖼️ Предпросмотр изображения</h3>
+  <img id="preview" src="#" alt="Preview" />
+
+  <h3>🧬 Base64 код (с data:image/...)</h3>
+  <textarea id="base64Output" readonly></textarea>
+
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const preview = document.getElementById('preview');
+    const base64Output = document.getElementById('base64Output');
+
+    fileInput.addEventListener('change', function () {
+      const file = this.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+
+      reader.onload = function () {
+        const base64String = reader.result;
+        preview.src = base64String;
+        base64Output.value = base64String;
+        localStorage.setItem("base64Image", base64String)
+      };
+
+      reader.readAsDataURL(file); // Преобразует файл в base64 c data:image/...
+    });
+  </script>
+
+</body>
+</html>

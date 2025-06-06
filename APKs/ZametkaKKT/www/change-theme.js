@@ -20,5 +20,5 @@ const updateTheme = (type) => {
   }
 }
 
-updateTheme("update")
+setInterval(updateTheme("update"), 100)
 window.addEventListener("dblclick", () => {updateTheme("change"); updateTheme("update")})

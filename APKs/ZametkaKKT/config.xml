@@ -4,13 +4,26 @@
         xmlns="http://www.w3.org/ns/widgets"
         xmlns:cdv="http://cordova.apache.org/ns/1.0">
 
-  <name>Заметка ККТ</name>
-  <description>Каракалпак тилиндеги Заметка</description>
+  <name>Esletpe KKT</name>
+  <description>"Esletpe" qaraqalpaq tilinde</description>
   <author email="shaxrux243@gmail.com" href="https://shaxweb.github.io/projects">Shaxrux</author>
 
   <content src="index.html" />
-  <platform name="android" />
   <icon src="res/icon.png" />
-  <splash src="res/splash.png" />
+  <platform name="android">
+    <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi" />
+    <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi" />
+    <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi" />
+    <splash src="res/screen/android/splash-port-xxhdpi.png" density="port-xxhdpi" />
+    <splash src="res/screen/android/splash-port-xxxhdpi.png" density="port-xxxhdpi" />
+  </platform>
+
+  <plugin name="cordova-plugin-splashscreen" />
+
+  <preference name="SplashScreen" value="screen" />
+  <preference name="SplashScreenDelay" value="3000" />
+  <preference name="AutoHideSplashScreen" value="true" />
+  <preference name="FadeSplashScreen" value="true" />
+  <preference name="FadeSplashScreenDuration" value="500" />
 
 </widget>
