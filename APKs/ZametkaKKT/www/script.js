@@ -45,7 +45,7 @@ const viewNote = (id) => {
   viewNoteBox.style.display = "block"
   viewNoteBox.innerHTML = `
 <h2>${note.name}</h2><hr><br>
-<pre>${note.text}</pre><br><br><br>
+<pre contenteditable>${note.text}</pre><br><br><br>
 <div class="buttons">
 <button onclick="deleteNote(${note.id})">Óshiriw</button>
 <button onclick="closeNoteViewBox()">Jabıw</button>
