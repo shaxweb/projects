@@ -112,6 +112,14 @@ main { padding: .5em; }
   overflow-wrap: break-word; /* современный стандарт */
 }
 
+/* 
+#view-note pre {
+  color: var(--txt-color);
+  transition: all .5s ease;
+  overflow: auto;
+}
+*/ 
+
 .main-form {
   height: 80vh;
   display: flex;
