@@ -59,6 +59,7 @@ main { padding: .5em; }
   position: absolute;
   color: var(--txt-color);
   bottom: .5em; right: .5em;
+  transition: all .5s ease;
 }
 
 #add-note-button {
