@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.shaxcoder.zametkakkt"
-        version="Alpha 0.17"
+        version="Alpha 0.18"
         xmlns="http://www.w3.org/ns/widgets"
         xmlns:cdv="http://cordova.apache.org/ns/1.0">
 
@@ -12,26 +12,13 @@
   <access origin="*" />
   <allow-navigation href="*" />
   <allow-intent href="*" />
-  <preference name="SplashScreen" value="screen" />
-  <preference name="SplashScreenDelay" value="3000" />
-  <preference name="FadeSplashScreen" value="true" />
-  <preference name="FadeSplashScreenDuration" value="500" />
-  <preference name="AutoHideSplashScreen" value="true" />
-  <preference name="ShowSplashScreenSpinner" value="false" />
-  <preference name="SplashMaintainAspectRatio" value="true" />
   
   <platform name="android">
     <icon src="res/icon.png" />
-    <splash src="res/screen/android/splash-port-mdpi.png" density="port-mdpi" />
-    <splash src="res/screen/android/splash-port-hdpi.png" density="port-hdpi" />
-    <splash src="res/screen/android/splash-port-xhdpi.png" density="port-xhdpi" />
-    <splash src="res/screen/android/splash-port-xxhdpi.png" density="port-xxhdpi" />
-    <splash src="res/screen/android/splash-port-xxxhdpi.png" density="port-xxxhdpi" />
+    <preference name="SplashScreenDelay" value="2000" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/splash.png" />
+    <preference name="AndroidWindowSplashScreenBackground" value="#FFFFFF" />
   </platform>
 
-  <plugin name="cordova-plugin-splashscreen" spec="6.0.2" />
-
 </widget>
-
-
-<!--   <preference name="SplashScreen" value="launchscreen" /> -->
