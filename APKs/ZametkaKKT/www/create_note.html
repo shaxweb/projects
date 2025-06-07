@@ -32,8 +32,8 @@ const addNote = (name, text) => {
   let globalData = JSON.parse(db.getItem("globalData")) || {id: 1}
   let errorBox = document.getElementById("errorBox")
   
-  if (!name.replace(/\s+/g, '')) {errorBox.textContent = "Заметка атин жазин!"; errorBox.style.display = "block"; return}
-  if (!text.trim()) {errorBox.textContent = "Заметка текстин жазин!"; errorBox.style.display = "block"; return}
+  if (!name.replace(/\s+/g, '')) {errorBox.textContent = "Esletpe atın jazıń!"; errorBox.style.display = "block"; return}
+  if (!text.trim()) {errorBox.textContent = "Esletpe tekstin jazıń!"; errorBox.style.display = "block"; return}
   
   let note = {
     id: globalData.id,
