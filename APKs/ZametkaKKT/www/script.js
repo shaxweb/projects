@@ -44,13 +44,15 @@ const viewNote = (id) => {
   
   viewNoteBox.style.display = "block"
   viewNoteBox.innerHTML = `
-<h2>${note.name}</h2><hr><br>
-<pre>${note.text}</pre><br><br><br>
+<h2 id="noteName${note.id}"></h2><hr><br>
+<pre id="noteText${note.id}"></pre><br><br><br>
 <div class="buttons">
 <button onclick="deleteNote(${note.id})">Óshiriw</button>
 <button onclick="closeNoteViewBox()">Jabıw</button>
 </div>
   `
+  document.getElementById(`noteText${note.id}`).textContent = note.text
+  document.getElementById(`noteName${note.id}`).textContent = note.name
   // contenteditable
 }
 
