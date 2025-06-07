@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.shaxcoder.zametkakkt"
-        version="Alpha 0.18"
+        version="Alpha 0.19"
         xmlns="http://www.w3.org/ns/widgets"
         xmlns:cdv="http://cordova.apache.org/ns/1.0">
 
-  <name>Zametka KKT</name>
+  <name>Eslepte KKT</name>
   <description>Esletpe qaraqalpaq tilinde</description>
   <author email="shaxrux243@gmail.com" href="https://shaxweb.github.io/projects">Shaxrux</author>
 
