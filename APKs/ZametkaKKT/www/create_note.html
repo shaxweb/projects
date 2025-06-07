@@ -46,7 +46,7 @@ const addNote = (name, text) => {
   globalData = JSON.stringify({id: globalData.id + 1})
   db.setItem("notes", notes)
   db.setItem("globalData", globalData)
-  window.location.href = "index.html"
+  window.history.back()
 }
 
 </script>

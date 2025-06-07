@@ -3,9 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Esletpe</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
+    <h3>"Esletpe" qaraqalpaq tilinde</h3>
+  </header>
+  <main>
+    <div class="viewNoteBox">
+      <h1 id="viewNoteName" contenteditable=""></h1>
+      <pre id="viewNoteText" contenteditable=""></pre>
+    </div>
+    <div id="viewNoteButtons">
+      <button onclick="deleteNote()">Óshiriw</button>
+      <button onclick="saveEditedNote()">Saqlaw</button>
+    </div>
+  </main>
+<script src="change-theme.js"></script>
+<script>
+const db = localStorage;
+const sdb = sessionStorage;
+const opening_note_id = sdb.getItem("opening_note_id") || null
+let notes = JSON.parse(db.getItem("notes")) || null
+let viewNoteName = document.getElementById("viewNoteName")
+let viewNoteText = document.getElementById("viewNoteText")
+let note = ""
+
+if (notes == null || opening_note_id == null) { alert("Note Not Found"); window.location.href = "index.html"}
+
+for (let i of notes) { if (i.id == opening_note_id) {note = i} }
+viewNoteName.textContent = note.name
+viewNoteText.textContent = note.text
+
+const saveEditedNote = () => {
+  let updated_note = {
+    id: opening_note_id,
+    name: viewNoteName.textContent,
+    text: viewNoteText.textContent,
+    created_at: note.created_at
+  }
+  let newNotesList = []
+  for (let i of notes) {
+    if (i.id == opening_note_id) {
+      newNotesList.push(updated_note)
+    } else { newNotesList.push(i) }
+  }
+  db.setItem("notes", JSON.stringify(newNotesList))
+  alert("Saqlandı ✓")
+  window.history.back()
+}
+
+const deleteNote = () => {
+  let notes = JSON.parse(db.getItem("notes")) || []
+  let newNotes = []
   
+  for (let i of notes) {if (i.id != opening_note_id) { newNotes.push(i) } }
+  
+  let deleteConfirm = confirm("Shınında da óshiriwdi qáleysiz be?")
+  if (deleteConfirm) {
+    db.setItem("notes", JSON.stringify(newNotes))
+    window.history.back()
+  }
+}
+
+</script>
 </body>
 </html>

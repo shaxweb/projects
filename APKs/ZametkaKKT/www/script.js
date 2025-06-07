@@ -9,7 +9,7 @@ const updatePage = () => {
   
   for (let i of notes) {
     textContent += `
-      <button class="note" onclick="viewNote(${i.id})">
+      <button class="note" onclick="openViewPage(${i.id})">
         <h2>${i.name}</h2><br>
         <p class="date">${i.created_at}</p>
       </button>
@@ -54,6 +54,11 @@ const viewNote = (id) => {
   document.getElementById(`noteText${note.id}`).textContent = note.text
   document.getElementById(`noteName${note.id}`).textContent = note.name
   // contenteditable
+}
+
+const openViewPage = (id) => {
+  sdb.setItem("opening_note_id", id)
+  window.location.href = "view_note.html"
 }
 
 const deleteNote = (id) => {
