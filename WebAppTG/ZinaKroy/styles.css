@@ -15,7 +15,7 @@ body {
 img {
   user-select: none;
   width: 80%;
-  filter: drop-shadow(0 0 1em #01BE30);
+  filter: drop-shadow(0 0 1em grey);
   border-radius: 50%;
   transition: all .5s ease;
   animation: 1.5s logoAnim infinite;
@@ -25,7 +25,7 @@ img {
   0%, 100% {}
   50% {
     transform: scale(0.95);
-    box-shadow: 0 0 1em #01BE30;
+    box-shadow: 0 0 1em grey;
   }
 }
 
