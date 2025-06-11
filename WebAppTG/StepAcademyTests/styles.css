@@ -28,3 +28,10 @@ img {
     box-shadow: 0 0 1em grey;
   }
 }
+
+img {
+  user-select: none;
+  pointer-events: none; /* Если нало чтобы он нажался, то убрать это */
+  -webkit-user-drag: none;
+  outline: none;
+}
