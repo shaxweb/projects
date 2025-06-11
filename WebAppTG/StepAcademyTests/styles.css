@@ -17,9 +17,13 @@ img {
   filter: drop-shadow(0 0 1em grey);
   border-radius: 50%;
   transition: all .5s ease;
+  animation: 1.5s logoAnim infinite;
 }
 
-img:hover {
-  transform: scale(0.95);
-  box-shadow: 0 0 1em grey
+@keyframes logoAnim{
+  0%, 100% {}
+  50% {
+    transform: scale(0.95);
+    box-shadow: 0 0 1em grey;
+  }
 }
