@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+}
+
+img {
+  width: 80%;
+  filter: drop-shadow(0 0 1em grey);
+  border-radius: 50%;
+  transition: all .5s ease;
+}
+
+img:hover {
+  transform: scale(0.95);
+  box-shadow: 0 0 1em grey
+}
