@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test</title>
+</head>
+<body>
+  <div class="box">
+    <input placeholder="Translate To Qqr" id="translateInput">
+    <button onclick="translator('rus_Cyrl', 'kaa', translateInput.value)">Translate</button>
+    <p id="translateTextBox"></p>
+  </div>
+  <div class="box">
+    <input placeholder="Ai Text Жаз" id="aiInput">
+    <button onclick="aiGemini(aiInput.value)">Send Message</button>
+    <p id="aiTextBox"></p>
+  </div>
+<script src="test.js"></script>
+</body>
+</html>

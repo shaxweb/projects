@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gemini API с Fetch (без import)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        textarea { width: 80%; height: 100px; margin-bottom: 10px; padding: 10px; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        #response { border: 1px solid #ccc; padding: 15px; margin-top: 20px; min-height: 50px; background-color: #f9f9f9; white-space: pre-wrap; }
+        .warning { color: red; font-weight: bold; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Тест Gemini API с Fetch (без import)</h1>
+
+    <p class="warning">
+        ВНИМАНИЕ: Ваш API-ключ виден в этом коде. ЭТО КРАЙНЕ НЕБЕЗОПАСНО ДЛЯ РЕАЛЬНЫХ ПРИЛОЖЕНИЙ!
+        Используйте этот подход ТОЛЬКО для локального тестирования и обучения.
+        Для продакшена всегда используйте серверный прокси.
+    </p>
+
+    <label for="modelSelect">Выберите модель:</label>
+    <select id="modelSelect">
+        <option value="gemini-pro">gemini-pro (текст)</option>
+        <option value="gemini-1.5-flash">gemini-1.5-flash (быстрый, multimodal)</option>
+        <option value="gemini-1.5-pro">gemini-1.5-pro (мощный, multimodal)</option>
+        </select><br><br>
+
+    <textarea id="prompt" placeholder="Введите ваш запрос, например: 'Напиши короткий рассказ о приключениях котенка в большом городе.'"></textarea><br>
+    <button id="generateBtn">Сгенерировать ответ</button>
+
+    <h2>Ответ Gemini:</h2>
+    <div id="response">Ожидание запроса...</div>
+
+    <script>
+        // !!! ОЧЕНЬ ВАЖНО: НИКОГДА не делайте это в продакшене!
+        // Ваш API-ключ будет доступен любому пользователю.
+        // Для продакшена, используйте серверный прокси.
+        const API_KEY = "AIzaSyA_Q3oM-noZoAnso0UZ_UdRmewdavymNOw"; // <--- ЗАМЕНИТЕ НА ВАШ РЕАЛЬНЫЙ API-КЛЮЧ
+
+        async function generateContent() {
+            const promptText = document.getElementById("prompt").value;
+            const modelId = document.getElementById("modelSelect").value;
+            const responseDiv = document.getElementById("response");
+
+            if (!promptText) {
+                responseDiv.innerText = "Пожалуйста, введите запрос.";
+                return;
+            }
+
+            responseDiv.innerText = "Генерация ответа, пожалуйста, подождите...";
+
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${modelId}:generateContent?key=${API_KEY}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        contents: [
+                            {
+                                parts: [
+                                    {
+                                        text: promptText
+                                    }
+                                ]
+                            }
+                        ]
+                    })
+                });
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    console.error("Ошибка API:", errorData);
+                    responseDiv.innerText = `Ошибка при запросе к Gemini API: ${response.status} ${response.statusText}\n${JSON.stringify(errorData, null, 2)}`;
+                    return;
+                }
+
+                const data = await response.json();
+                console.log("Полный ответ API:", data); // Для отладки
+
+                if (data.candidates && data.candidates.length > 0 && data.candidates[0].content && data.candidates[0].content.parts && data.candidates[0].content.parts.length > 0) {
+                    const generatedText = data.candidates[0].content.parts[0].text;
+                    responseDiv.innerText = generatedText;
+                } else {
+                    responseDiv.innerText = "Не удалось получить сгенерированный текст. Возможно, ответ пуст или имеет непредвиденную структуру.";
+                    if (data.promptFeedback && data.promptFeedback.blockReason) {
+                        responseDiv.innerText += `\nПричина блокировки: ${data.promptFeedback.blockReason}`;
+                    }
+                }
+
+            } catch (error) {
+                console.error("Ошибка сети или парсинга:", error);
+                responseDiv.innerText = `Произошла ошибка сети или обработки: ${error.message}`;
+            }
+        }
+
+        document.getElementById("generateBtn").addEventListener("click", generateContent);
+    </script>
+</body>
+</html>

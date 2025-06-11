@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+  <input>
+  <button>Send</button>
+  <div id="responseDiv"></div>
+<script>
+  
+  const apiUrl = "https://api.from-to.uz/api/v1/translate"
+  let responseDiv = document.getElementById("responseDiv")
+  let userText = document.querySelector("input")
+  let sendBtn = document.querySelector("button")
+  
+  sendBtn.addEventListener("click", () => {
+    
+    const response = fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        from_lang: "rus_Cyrl",
+        lang_to: "kaa",
+        text: userText.value
+      })
+    })//.then(response => response.json())
+    //.then(data => {
+    //  responseDiv.textContent = "++"
+    //})
+  
+  })
+  
+</script>
+</body>
+</html>

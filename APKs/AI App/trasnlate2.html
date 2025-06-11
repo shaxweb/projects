@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+<script>
+const url = "https://api.from-to.uz/api/v1/translate";
+
+async function translate(text) {
+	const payload = {
+		body: {
+			lang_from: "rus_Cyrl",
+			lang_to: "kaa",
+			// resultCase: "rus_Cyrl",
+			text: text
+		}
+	};
+
+	try {
+		const response = await fetch(url, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify(payload)
+		});
+
+		if (response.ok) {
+			const data = await response.json();
+			return { code: 200, text: data.result };
+		} else {
+			const errorText = await response.text();
+			return { code: 404, text: `[ERROR] error ${response.status} with ${errorText}` };
+		}
+	} catch (error) {
+		return { code: 404, text: `[ERROR] error with ${error.message}` };
+	}
+}
+
+translate(prompt())
+</script>
+</html>
