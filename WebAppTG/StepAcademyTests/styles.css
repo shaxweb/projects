@@ -13,6 +13,7 @@ body {
 }
 
 img {
+  user-select: none;
   width: 80%;
   filter: drop-shadow(0 0 1em grey);
   border-radius: 50%;
