@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+}
+
+img {
+  user-select: none;
+  width: 80%;
+  filter: drop-shadow(0 0 1em #01BE30);
+  border-radius: 50%;
+  transition: all .5s ease;
+  animation: 1.5s logoAnim infinite;
+}
+
+@keyframes logoAnim{
+  0%, 100% {}
+  50% {
+    transform: scale(0.95);
+    box-shadow: 0 0 1em #01BE30;
+  }
+}
+
+img {
+  user-select: none;
+  pointer-events: none; /* Если нало чтобы он нажался, то убрать это */
+  -webkit-user-drag: none;
+  outline: none;
+}
