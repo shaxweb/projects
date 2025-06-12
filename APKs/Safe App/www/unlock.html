@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unlock</title>
+</head>
+<body>
+  <div class="unlock-box">
+    <h1 id="textPw">Create Password</h1>
+    <input id="inputPw" placeholder="Enter there" type="number">
+  </div>
+<script>
+  const db = localStorage;
+  const inputPw = document.getElementById("inputPw")
+  let password = ""
+  
+  inputPw.addEventListener("input", () => {
+    let valuePw = inputPw.value
+    let textPw = document.getElementById("textPw")
+    
+    if (valuePw.length == 4 && password == "") {
+      password = valuePw
+      textPw.innerText = "Enter again"
+      inputPw.value = ""
+    } else if (valuePw.length == 4 && password != "") {
+      if (valuePw == password) {
+        let data = {pw: password}
+        db.setItem("userPassword", JSON.stringify(data))
+        window.location.href = "index.html"
+      } else {
+        inputPw.value = ""
+        alert("UnCorrect Password")
+      }
+    }
+    
+  })
+  
+</script>
+</body>
+</html>

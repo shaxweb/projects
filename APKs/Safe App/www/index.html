@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Safe App</title>
+</head>
+<body>
+  
+<script>
+  const db = localStorage;
+  let appPassword = JSON.parse(db.getItem("appPassword")) || null
+  
+  if (appPassword == null) { window.location = "unlock.html"}
+  
+</script>
+</body>
+</html>
