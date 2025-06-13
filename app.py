@@ -1,11 +1,14 @@
-from flask import Flask, jsonify, request
+from flask import Flask, render_template, jsonify, request
+import time
 
 app = Flask(__name__)
+render = render_template
 
 
 @app.route("/")
 def home():
-	return "<h1>Hello, World</h1>"
+    current_time = time.strftime("%H:%M:%S", time.localtime())
+	return render("app.py", time=current_time)
 
 # Пример GET-запроса
 @app.route("/hello", methods=['GET'])
