@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fetch Example</title>
+</head>
+<body>
+
+<script>
+  const apiUrl = "https://projects-yox1.onrender.com/echo/";
+  
+  const testApi = async () => {
+    try {
+      const response = await fetch(apiUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({name: "Shaxrux"})
+      })
+      
+      if (response.ok) {
+        const data = response.json()
+        alert(data.name)
+      } else {
+        alert(response.status)
+      }
+    } catch (error) { alert(error) }
+  }
+  
+  testApi()
+</script>
+
+</body>
+</html>
