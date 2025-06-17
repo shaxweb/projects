@@ -1,61 +1,40 @@
-<div class="box">
-  <button>Click Me!</button>
-  <hr>
-  <input placeholder="color: " id="color">
-  <button id="change" onclick="changeColor(color.value)">Change</button>
-</div>
-<style>
-  * { margin: 0; padding: 0; }
-  body {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #2F2F2F;
-  }
-  .box { display: flex; flex-direction: column; gap: 2em 0; }
-  button {
-    background: #8C91C7;
-    padding: 2em 3em;
-    border-radius: 1em;
-    border: 2px solid #838BDC;
-    box-shadow: .5em .5em 1em aqua;
-    transition: all .15s ease;
-  }
-  button:active {
-    box-shadow: .25em .25em .5em aqua;
-    transform: translate(.25em, .25em);
-  }
-  input {
-    background: #838BDC;
-    color: white;
-    padding: 1em;
-    border-radius: 1em;
-    border: none;
-    outline: none;
-    box-shadow: .5em .5em 1em aqua;
-    transition: all .5s ease;
-  }
-  input:focus {
-    box-shadow: .25em .25em .5em aqua;
-    transform: translate(.25em, .25em);
-  }
-  hr { padding: 1em; background: aqua; border: none; border-radius: .5em; }
-</style>
-<script>
-  
-  const mainButton = document.querySelector("button")
-  const colorInput = document.querySelector("#color")
-  
-  let changeColor = (color) => {
-    if (color == "default" || color == "Default") {
-      mainButton.style.background = "#8C91C7"
-      mainButton.style.border = `2px solid #838BDC`
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tapsirma-1</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    mainButton.style.background = color
-    mainButton.style.border = `2px solid ${color}`
-    colorInput.value = ""
-  }
+    input, .textView {
+      background: #CFCFCF;
+      padding: 1em;
+      border-radius: .5em;
+      border: 2px solid grey;
+      margin: .5em;
+    }
+  </style>
+</head>
+<body>
+  <input id="userText" type="text" placeholder="Text Jaz">
+  <div class="textView" style="display: none;"></div>
+
+<script>
+  const userText = document.getElementById("userText")
+  const textView = document.querySelector(".textView")
   
+  userText.addEventListener("input", () => {
+    textView.textContent = userText.value
+    textView.style.display = "block"
+  })
 </script>
+</body>
+</html>
