@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+  
+  <h1 id="ati">Belgisiz</h1>
+  <button id="atin_ozgertiw">Atin ozgertiw</button>
+  
+  <!-- Body дин цветин озгертетин кнопка -->
+  <button id="changeBody">Body qaraĝa ozgertiw</button>
+  
+<script>
+  const atiBox = document.querySelector("#ati")
+  const atiBtn = document.querySelector("#atin_ozgertiw")
+  
+  // Атин озгертетин функций ↓
+  atiBtn.addEventListener("click", () => {
+    // Атин сорап аламиз
+    const name = prompt("Atiñ: ")
+    // Атин бокса коямиз
+    atiBox.innerText = name
+  })
+  
+  // body ди карага озгертетин фугкция ↓
+  const changeBody = document.querySelector("#changeBody")
+  
+  changeBody.addEventListener("click", () => {
+    // Body ди шикирип аламиз
+    const body = document.querySelector("body")
+    // буни билесенго енди
+    body.style.background = "black"
+    body.style.color = "white"
+  })
+  
+  
+  
+  
+  
+</script>
+</body>
+</html>
