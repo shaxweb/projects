@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <div class="box">
+    <h2>Hello World</h2>
+    <buttun class="btn">Bas</buttun>
+  </div>
+  <script>
+    const box = document.querySelector(".box")
+    
+    box.addEventListener("click", () => {
+      box.style.background = "black"
+      box.style.color = "white"
+      box.style.border = "2px solid red"
+      box.style.padding = "2em"
+      box.innerHTML = `
+      <div>
+      <h2> Registratsiya</h2>
+      <input type="number" placeholder="telefon">
+      <input type="text" placeholder="Name">
+      <button>Dawam ettiriw</button>
+      </div>
+    `
+    })
+    
+    const btn = document.querySelector(".btn")
+    
+    btn.addEventListener("click", () => {
+          btn.style.background = "black"
+          btn.style.color = "white"
+          btn.style.border = "2px solid red"
+          btn.style.padding = "2em"
+  </script>
+</body>
+
+</html>

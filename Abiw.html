@@ -6,19 +6,16 @@
   <title></title>
 </head>
 <body>
-  <h1>Hello World</h1>
-  <button id="changeBg">Bas</button>
+  <h1 class="text">Hello World</h1>
+  <button id="btn">Bas</button>
   
 <script>
-
-const changeBg = document.querySelector("#changeBg")
-
-changeBg.addEventListener("click", () => {
-  let body = document.querySelector("body")
-  body.style.background = "black"
-  body.style.color = "white"
-})
-
+  const btn = document.querySelector("#btn")
+  const text = document.querySelector(".text")
+  
+  btn.addEventListener("click", () => {
+    text.innerText = "Basildi"
+  })
 </script>
 </body>
 </html>
