@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+  <h1 class="text">Hello World</h1>
+  <button id="btn">Bas</button>
+  
+<script>
+  const btn = document.querySelector("#btn")
+  const text = document.querySelector(".text")
+  
+  btn.addEventListener("click", () => {
+    let new_text = prompt("Text jaz: ")
+    text.innerText = new_text
+  })
+</script>
+</body>
+</html>
